@@ -430,8 +430,8 @@ class ConvModule(nn.Module):
             norm = partial(norm_layer, num_features=norm_channels)
             self.add_module("norm", norm)
             if self.with_bias:
-                from torch.nnModules.batchnorm import _BatchNorm
-                from torch.nnModules.instancenorm import _InstanceNorm
+                from torch.nn.modules.batchnorm import _BatchNorm
+                from torch.nn.modules.instancenorm import _InstanceNorm
 
                 if isinstance(norm, (_BatchNorm, _InstanceNorm)):
                     warnings.warn("Unnecessary conv bias before batch/instance norm")
