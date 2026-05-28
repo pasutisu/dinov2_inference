@@ -17,7 +17,7 @@ import torch
 import torch.nn as nn
 from torch.nn.init import trunc_normal_
 
-from dinov2.layers import Mlp, PatchEmbed, SwiGLUFFNFused, Attention, Block
+from ..layers import Mlp, PatchEmbed, SwiGLUFFNFused, Attention, Block
 
 
 logger = logging.getLogger("dinov2")
